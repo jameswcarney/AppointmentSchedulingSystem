@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="475.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentsController">
+   <children>
+      <TableView fx:id="AppointmentsTable" layoutX="10.0" layoutY="67.0" prefHeight="280.0" prefWidth="780.0">
+        <columns>
+            <TableColumn fx:id="AppointmentsTableIdColumn" prefWidth="50.0" text="ID" />
+            <TableColumn fx:id="AppointmentsTableTitleColumn" prefWidth="75.0" text="Title" />
+          <TableColumn fx:id="AppointmentsTableDescriptionColumn" prefWidth="91.0" text="Description" />
+          <TableColumn fx:id="AppointmentsTableLocationColumn" prefWidth="84.0" text="Location" />
+            <TableColumn fx:id="AppointmentsTableContactColumn" prefWidth="48.0" text="Contact" />
+            <TableColumn fx:id="AppointmentsTableTypeColumn" prefWidth="78.0" text="Type" />
+            <TableColumn fx:id="AppointmentsTableStartColumn" prefWidth="125.0" text="Start" />
+            <TableColumn fx:id="AppointmentsTableEndColumn" prefWidth="125.0" text="End" />
+            <TableColumn fx:id="AppointmentsTableCustomerIdColumn" prefWidth="75.0" text="Customer ID" />
+            <TableColumn fx:id="AppointmentsTableUserIdColumn" prefWidth="50.0" text="User ID" />
+        </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="34.0" text="Appointments">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="weeklyRadioButton" layoutX="601.0" layoutY="45.0" mnemonicParsing="false" onAction="#onWeeklyRadioButtonSelected" text="Weekly">
+         <toggleGroup>
+            <ToggleGroup fx:id="radioButtonGroup" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="monthlyRadioButton" layoutX="671.0" layoutY="45.0" mnemonicParsing="false" onAction="#onMonthlyRadioButtonSelected" text="Monthly" toggleGroup="$radioButtonGroup" />
+      <RadioButton fx:id="allRadioButton" layoutX="745.0" layoutY="45.0" mnemonicParsing="false" onAction="#onAllRadioButtonSelected" selected="true" text="All" toggleGroup="$radioButtonGroup" />
+      <Button fx:id="deleteAppointmentButton" layoutX="738.0" layoutY="357.0" mnemonicParsing="false" onAction="#onDeleteAppointmentButtonClicked" text="Delete" />
+      <Button fx:id="editAppointmentButton" layoutX="691.0" layoutY="357.0" mnemonicParsing="false" onAction="#onEditAppointmentButtonClicked" text="Edit" />
+      <Button fx:id="addAppointmentButton" layoutX="643.0" layoutY="357.0" mnemonicParsing="false" onAction="#onAddAppointmentButtonClicked" text="Add" />
+      <Button fx:id="cancelButton" layoutX="738.0" layoutY="440.0" mnemonicParsing="false" onAction="#onCancelButtonClicked" text="Cancel" />
+   </children>
+</AnchorPane>
